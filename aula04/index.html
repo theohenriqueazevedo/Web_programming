@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Learning forms</title>
 </head>
 <body>
-    <h1>my page</h1>
+    <form action="" method="post">
 
-    <ol>1</ol>
-    <ol>2</ol>
-    <ol>3</ol>
-    <ol>4</ol>
-    <ol>
-        <li>3</li>
-        <li>0</li>
-    </ol>
-    <!--surce é a fonte e alt é o alternative text. Lembrar de ver os diretorios-->
-    <img src="/figures/download.jpeg" alt="cs é legal">
-    <p>couonter strike</p> 
+        <label for="Username">Username</label>
+        <input type="text" id="Username" name="" placeholder="Username">
+    
+        <label for="password" hidden>password</label>
+        <input type="password" id ="password" name="xuxa" Senha> 
+        <!-- name é usado para o servidor saber, normalemnte name e id tem o mesmo conteudo -->
 
-    <figure>
-        <img src="../figures/download.jpeg" alt="cs é">
-        <figcaption>
-            counter strike
-        </figcaption>
-    </figure>
+        <button>Submit this shit</button> 
+        <!-- se esta dentro de um formulario nao tem necessidade de colocar type submit 
+         -->
+        <!-- quando clicado no botao submit, transmitindo dados usando metodo get. Normlamente o metodo 'post' é usado quando quer mudar infromaao no sevirdor, e enteo os dados sao modificados na url. o name dita a variavel que vai bater no servidor. xuxa = senha inserida -->
+
+    </form>
+        <input type="radio" name="tipo-cafe" id="expresso" value="expresso">
+        <label for="expresso">Café Expresso</label>
+
+    </form>
 
 
+    <!-- explorando urls e requisições de servidor, o servidor do bing esta esperando um parametro que tem q como 'name' -->
+    <form action="https://www.bing.com/search" method="get">
+        <label for="q">Nome do video</label>
+        <input type="text" id="q" name="q" placeholder="Nome do video">
+
+        <button>Submit this shit</button> 
+
+    </form>
 </body>
 </html>
