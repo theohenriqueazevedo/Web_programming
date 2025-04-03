@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning forms</title>
+
+    <!-- style can be were, for example, lets put here. -->
+
+        <style>
+            form{
+                margin-left: 150px;
+                margin-right: 150px;
+                background-color: beige ;
+                border: 1px solid black;
+                
+            }
+            p{
+                border: 1px solid blue;
+                padding: 8px;
+                margin: 40px;
+                
+            }
+
+        </style>
+
+</head>
+<body>
+    
+
+    
+    <form action="https://www.bing.com/search" method="get">
+        <label for="q">Nome do video</label>
+        <input type="text" id="q" name="q" placeholder="Nome do video">
+
+        <button>Submit this shit</button> 
+
+    </form>
+
+    <label for="tam-camisa">Tamanho Camiseta</label>
+<select name="tam-camisa" id="tam-camisa">
+    <option value="bl">Babylook</option>
+    <option value="p">P</option>
+    <option value="m">M</option>
+    <option value="g">G</option>
+    <option value="gg">GG</option>
+    <option value="xg">XG</option>
+</select>
+
+
+    <p>i'm paragrafh 1</p>
+    <p>i'm paragrafh 2</p>
+</body>
+</html>
