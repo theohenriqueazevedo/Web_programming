@@ -1,57 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atividade Forms</title>
 </head>
 <body>
 
+    <header>
+        <h1>Formulário de Apresentação de Projetos de Extensão</h1>
+        <nav>
+            <ul>
+                    <li><a href="https://sigaa.unifei.edu.br/sigaa/verTelaLogin.do">UNIFEI</a></li>
+                    <li><a href="https://sigaa.unifei.edu.br/sigaa/verTelaLogin.do">PROEX</a></li>
+                    <li><a href="https://sigaa.unifei.edu.br/sigaa/verTelaLogin.do">INTEGRA UNIFEI</a></li>
+            </ul>
+        </nav>  
+    </header>
 
-    <!-- Lembrar de mudar ids e colocar footer, nav, header, name -->
-    <form action="#">
-        <fieldset>
-        <legend>Identificação do Projeto</legend>
+    <main>
+        <form action="https://sigaa.unifei.edu.br/sigaa/verTelaLogin.do" method="post">
+            <fieldset>
+                <legend>Identificação do Projeto</legend>
 
-        <label for="name">Nome do Projeto</label>
-        <input type="text" name="nome" id="name">
+                <label for="project_name">Nome do Projeto</label>
+                <input type="text" name="project_name" id="project_name">
 
-        <label for="nome">Quantidade de integrantes</label>
-        <input type="number" name="idade" id="idade">
+                <label for="number">Quantidade de integrantes</label>
+                <input type="number" name="number" id="number">
 
-        <label for="idade">Instituo de Localização</label>
-        <input type="text" name ="intituto" id = "intituto">
+                <label for="instituto">Instituo de Localização</label>
+                <input type="text" name ="instituto" id = "instituto">
+            </fieldset>
+            
 
-        </fieldset>
-        
+            <fieldset>
+                <legend>Área de atuação</legend>
 
-        <fieldset>
-            <legend>Área de atuação</legend>
-            <input type="radio" name="tipo-cafe" id="expresso" value="expresso">
-            <label for="expresso">Aplicação Web</label>
-            <input type="radio" name="tipo-cafe" id="expresso" value="expresso">
-            <label for="expresso">Dev games</label>
-            <input type="radio" name="tipo-cafe" id="expresso" value="expresso">
-            <label for="expresso">Drones</label>
-            <input type="radio" name="tipo-cafe" id="expresso" value="expresso">
-            <label for="expresso">Competição</label>
-            <input type="radio" name="tipo-cafe" id="expresso" value="expresso">
-            <label for="expresso">Contabilidade</label>
-            <input type="radio" name="tipo-cafe" id="expresso" value="expresso">
-            <label for="expresso">Meterologia</label>
-        </fieldset>
+                <input type="radio" name="area" id="web" value="web">
+                <label for="web">Aplicação Web</label>
 
-        <fieldset>
-            <legend>Fomento</legend>
-                <label for="type">Tipo</label>
-                <select name="tam-camisa" id="type">
-                <option value="bl">Empresa junior</option>
-                <option value="p">Equipe</option>
-                <option value="m">Centro</option>
-                <option value="g">DA</option>
-                </select>
-        </fieldset>
+                <input type="radio" name="area" id="games" value="games">
+                <label for="games">Dev games</label>
+                
+                <input type="radio" name="area" id="Drones" value="Drones">
+                <label for="Drones">Drones</label>
+                
+                <input type="radio" name="area" id="Competição" value="Competição">
+                <label for="Competição">Competição</label>
+                
+                <input type="radio" name="area" id="contabilidade" value="contabilidade">
+                <label for="contabilidade">Contabilidade</label>
+                
+                <input type="radio" name="area" id="Meterologia" value="Meterologia">
+                <label for="Meterologia">Meterologia</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Fomento</legend>
+                    <label for="type">Tipo</label>
+                    <select name="fomento" id="fomento">
+                        <option value="empresa">Empresa junior</option>
+                        <option value="equipe">Equipe</option>
+                        <option value="centro">Centro</option>
+                        <option value="da">DA</option>
+                    </select>
+            </fieldset>
+
+            <button type="submit">Enviar</button>
 
         </form>
+    </main>
+    <footer>
+        <p>Feito por <a href="https://github.com/theohenriqueazevedo" >Theo Henrique 2024006729</a></p>
+    </footer>
 </body>
 </html>
