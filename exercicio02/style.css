@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards-container{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid black;
+        box-shadow: 0.2rem 0.2rem 0.3rem;
+        border-radius: 1rem;
+        flex: 0 300px;
+        background-color: white;
+
+        img{
+            max-width: 100%;
+            aspect-ratio: 10/10;
+            object-fit: contain;
+            background-color: rgb(246, 246, 245);
+        }
+        button{
+            background-color: rgb(76, 172, 172);
+            color: white;
+            width: 30%; 
+            align-self: center;
+            margin-top:auto;
+        }
+    }
+}
