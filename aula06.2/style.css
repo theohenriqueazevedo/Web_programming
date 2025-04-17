@@ -1,68 +1,109 @@
-
 body{
-    font-family: Edu Australia VIC WA NT Hand Arrows, sans-serif;
-    background-color: antiquewhite;
-    margin: 0;
+    font-family: 'Alegreya Sans SC';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/alegreya/v36/4UacrEBBsBhlBjvfkQjt71kZfyBzPgNG9hU4-6qj.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+
     padding: 0;
-    min-width: 97%;
+    margin: 0;
+    
+    box-sizing: border-box; /*faz com que a bordar faca parte do tamanho do elemento */
+    background-color: antiquewhite;
+    
+    min-height: 97vh; /*altura minima do body*/
+    
     display: flex;
     flex-direction: column;
 }
+
+header, nav, ul{
+    height: 4vh;
+}
+
 ul{
-    border: 1px solid blueviolet;
+    border: 1px solid black;
+    /* display: flex torna o conteinar flexivel e todos os seus descentes sao modificados */
+    /*conteiners flexiveis por padrao todos os descentes ficam no eixo principal da esq p/ dir e cima p/ baixo */
     display: flex;
-    flex-direction: row;
-    justify-content: space-around; 
-    /* alinhamento eixo princpial */
+    flex-direction: row; /*por padrao jah eh row*/
+    /*justify-content manipula os elementos do container do eixo printipal (eixo x) */
+    /*space-around eh arrodor do elemento */
+    justify-content: space-around; /*por padrao jah eh start*/
+    /*align-items manipula os elementos do container do eixo transversal (eixo y) */
     align-items: center;
-    padding: 0%;
-    margin: 0%;
-    background-color:rgb(0, 0, 0);
+    padding: 0;
+    margin: 0;
+    background-color: black;
+
+    /*estah dentro do ul, soh irah afetar ancoras dentro do ul*/
+    a{
+        color: white;
+        text-decoration: none;
+        /* a eh um elemento inline que so ocupa o espaco que precisa */
+        /* se voce quer que ele responda a essa mudanca de escala --> muda o elemento para bloco */
+        display: block;
+        transition: 0.3s;
+    }
+    
+    /*hover = pairar = passar o mouse em cima */
+    /*criacao de uma pseudo classe */
+    a:hover{
+        text-decoration: 1px underline white;
+        transform: scale(1.2); /*faz com que a escala do objeto fique 1.2 vezes maior durante o hover*/
+    }
+
 }
-header, ul, nav{
-    height: 8vh;
-}
-a{
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-a:hover{
-   text-decoration: 1px underline wheat; 
-   transform: scale(1.2);
-}
-li{
-    transition: 0.25s;
-}
-li:hover{
-    transform: scale(1.2);
-}   
+
 h1{
     text-align: center;
 }
+
 form{
     border: 2px solid black;
-    margin: 0 auto;
-    width: 50%;
-    height: 30vh;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
+    
+    /*rem -> utiliza muito para fontes e raios, se voce mexe na configuracao do navegador tudo altera junto*/
+    border-radius: 1rem; /*rem por padrao equivele a uma unidade padrao da fonte do navegador*/ 
+    /*medidas relativas (X%) sempre sao em relacao ao primeiro ancestral*/
+    
+    width: 50%; /*40% de largura relacionado ao pai do forms (aqui seria o body)*/
+   
+    margin-left: auto; /*margem eh a propriedade que dita distancia do elemento para os demais elementos*/
+    margin-right: auto; /*deixa o calculo automatico para centralizacao*/
+    
+    height: 30vh; /*utiliza medida relativa em relacao a tela (vh)*/
+
+    display: flex; /*torna o conteinar flexivel*/
+    flex-direction: column; /*propriedade que define o eixo principal -> tornou o principal como coluna*/
+
     align-items: center;
-    button{
+    
+    /*(#) seleciona somente o lebal com o id configurado do label*/
+    /*a configuracao prioritaria do label com id eh maior do que label padrao*/
+    #label-email{
         margin-top: auto;
-        margin-bottom: 0.5rem;
-        width: 30%;
-        height: 5vh;
+    }
+    label{
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+    input{
         border-radius: 1rem;
-        font-family: Edu Australia VIC WA NT Hand;
-        background-color: beige;
+    }
+
+    button{
+        margin-top: auto; /*calcula o quanto precisa para empurrar todo mundo e ficar no final do elemento*/
+        margin-bottom: 0.25rem;
+        width: 40%;
+        height: 3vh;
+        border-radius: 1rem;
+        font-family: 'Alegreya Sans SC';
+        background-color: orange;
         font-size: 1rem;
     }
-    #label_email{
-        margin-top: 2rem;
-    }
+
 }
+
 footer{
     text-align: center;
     margin-top: auto;
