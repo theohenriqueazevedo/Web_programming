@@ -8,7 +8,7 @@ body{
     padding: 0;
     margin: 0;
     
-    box-sizing: border-box; /*faz com que a bordar faca parte do tamanho do elemento */
+    box-sizing: border-box; /*faz com que a borda faca parte do tamanho do elemento */
     background-color: antiquewhite;
     
     min-height: 97vh; /*altura minima do body*/
@@ -27,8 +27,9 @@ ul{
     /*conteiners flexiveis por padrao todos os descentes ficam no eixo principal da esq p/ dir e cima p/ baixo */
     display: flex;
     flex-direction: row; /*por padrao jah eh row*/
+
     /*justify-content manipula os elementos do container do eixo printipal (eixo x) */
-    /*space-around eh arrodor do elemento */
+    /*space-around eh arredor do elemento */
     justify-content: space-around; /*por padrao jah eh start*/
     /*align-items manipula os elementos do container do eixo transversal (eixo y) */
     align-items: center;
