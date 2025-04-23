@@ -11,7 +11,6 @@ console.log(x, cidade);
 console.log(typeof(x));
 console.log(typeof(cidade));
 
-x = 'cafe'
 
 console.log(typeof(x));
 
@@ -48,3 +47,18 @@ if(x===k){
 else{
     console.log('nem')
 }
+//continue after last class
+
+let y = null;
+
+y = 'itajuba'
+
+console.log(typeof(y))
+
+//Nan = not a number, mas é o valor de uma variavel que é do tipo number. O resultado da sua operação é um number, mas esta errado
+
+n = 6;
+console.log(n++) //incrementa depois
+
+n2 = 6;
+console.log(++n2) //incrementa antes
