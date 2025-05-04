@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcador pontuação - Truco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Marcador de pontuação truco</h1>
+        </header>
+        <img src="https://store-images.s-microsoft.com/image/apps.56065.14432392768875139.d6d1f94d-0ca2-4d2a-a2c2-7d184e0ff4a5.67e7eeae-d68a-4ed6-8bd6-933fc3435de5?mode=scale&q=90&h=1080&w=1920" alt="">
+        <div>
+            <div id="informacao_partida" aria-label="Informações da partida">
+                <p id="placar">0 a 0</p>
+
+                <label for="qtdvitoriosa">Escolha a pontuação vitoriosa:</label>
+                <select name="qtdvitoriosa" id="qtdvitoriosa">
+                    <option value="12">12</option>
+                    <option value="8">8</option>
+                </select>
+
+                <p>Use os botões abaixo para marcar a pontuação.</p>
+            </div>
+            <div id="controles_jogo" aria-label="Controles do jogo">
+                <button id="btn-jogador1">Jogador 1</button>
+                <button id="btn-jogador2">Jogador 2</button>
+                <button id="btn-reset">Reiniciar</button>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
