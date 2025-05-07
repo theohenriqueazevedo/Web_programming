@@ -1,0 +1,54 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 300px;
+    border-radius: 10px;
+    background-color: rgb(52, 80, 80);
+}
+
+#div_principal {
+    display: flex;
+    flex-direction: row; /* Alinha imagem e conteúdo lado a lado */
+    border: 1px solid black;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#div_imagem {
+    flex-shrink: 0;
+}
+
+#div_conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+}
+
+#div_inputs,
+#div_input_advinhacao {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+}
+
+#pmsg {
+    text-align: center;
+}
+h1{
+    text-align: center;
+}

@@ -1,0 +1,81 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*faz com que a borda faca parte do tamanho do elemento */
+    min-height: 97vh; 
+    display: flex;
+    flex-direction: column;
+}
+form{
+    border: 2px solid black;
+    
+    /*rem -> utiliza muito para fontes e raios, se voce mexe na configuracao do navegador tudo altera junto*/
+    border-radius: 1rem; /*rem por padrao equivele a uma unidade padrao da fonte do navegador*/ 
+    /*medidas relativas (X%) sempre sao em relacao ao primeiro ancestral*/
+    
+    width: 40%; /*40% de largura relacionado ao pai do forms (aqui seria o body)*/
+   
+    margin-left: auto; /*margem eh a propriedade que dita distancia do elemento para os demais elementos*/
+    margin-right: auto; /*deixa o calculo automatico para centralizacao*/
+    
+    height: 30vh; /*utiliza medida relativa em relacao a tela (vh)*/
+
+    display: flex; /*torna o conteinar flexivel*/
+    flex-direction: column; /*propriedade que define o eixo principal -> tornou o principal como coluna*/
+
+    align-items: center;
+    
+    /*(#) seleciona somente o lebal com o id configurado do label*/
+    /*a configuracao prioritaria do label com id eh maior do que label padrao*/
+    #label-email{
+        margin-top: auto;
+    }
+    label{
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+    input{
+        border-radius: 1rem;
+    }
+
+    button{
+        margin-top: auto; /*calcula o quanto precisa para empurrar todo mundo e ficar no final do elemento*/
+        margin-bottom: 0.25rem;
+        width: 40%;
+        height: 3vh;
+        border-radius: 1rem;
+        font-family: 'Alegreya Sans SC';
+        background-color: orange;
+        font-size: 1rem;
+    }
+
+}
+ul{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+
+    a{
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: 0.3s;
+    }
+    a.houver{
+        text-decoration: 1px underline wheat;
+        transform: scale(1.2);
+    }
+}
+
+h1{
+    
+    justify-content: center;
+    align-items: center;
+}footer{
+    text-align: center;
+}

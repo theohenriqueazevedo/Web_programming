@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo adivinhação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo de adivinhação</h1>
+    </header>
+
+    <main>
+        <div id="div_principal">
+            <!-- Div da Imagem -->
+            <div id="div_imagem">
+                <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/9884902-pensamento-personagem-homem-gratis-vetor.jpg" alt="Homem Pensando">
+            </div>
+    
+            <!-- Div do Conteúdo -->
+            <div id="div_conteudo">
+                <div id="div_pensamento">
+                    <h2>Área do Pensamento</h2>
+                    <p>Olá! Eu sou o Chat. Irei pensar em um número entre início e fim.</p>
+                    <p>Após digitar os números, clique em 'Pensar'.</p>
+                    <div id="div_inputs">
+                        <label for="inicio">Início</label>
+                        <input type="number" name="inicio" id="inicio">
+                        <label for="fim">Fim</label>
+                        <input type="number" name="fim" id="fim">
+                        <button id="btnpensar" type="button">Pensar</button>
+                    </div>
+                </div>
+    
+                <div id="div_adivinhacao">
+                    <h2>Área da Adivinhação</h2>
+                    <div id="div_input_advinhacao">
+                        <p>Qual número estou pensando?</p>
+                        <input type="number" name="adivinhado" id="adivinhado">
+                        <button id="btnadivinhar" type="button">Adivinhar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
