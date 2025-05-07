@@ -1,0 +1,14 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+.div_adicao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
