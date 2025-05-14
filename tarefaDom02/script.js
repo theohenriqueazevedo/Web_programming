@@ -46,7 +46,7 @@ btn.addEventListener("click", addProdutos)
 //forma dinamica de saber qnd um botao foi add
 //preciso saber quak botao foi clicado, por isso esse 'evento' que ira armazenar oq acontece
 const removeProd = (evt) =>{
-    //console.log(evt)
+    console.dir(evt)
     evt.target.parentNode.remove();
 
     //verificar se tem algo, se nao tiver, deve retornar a msg de carrino vazio

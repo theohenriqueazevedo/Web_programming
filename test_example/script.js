@@ -48,6 +48,7 @@ const addProduto = (nomeProduto) =>{
     ul.append(newLi);
 }
 const incrementaProd = (evt) =>{
+    console.dir(evt);
     let qtdAtual = Number(evt.target.parentNode.childNodes[0].childNodes[1].innerText);
     qtdAtual++;
     evt.target.parentNode.childNodes[0].childNodes[1].innerText = qtdAtual;
