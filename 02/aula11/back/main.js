@@ -53,7 +53,38 @@ app.get('/disciplinas', (req, res)=>{
     }
 
 
+
 })
+
+app.use(express.urlencoded({extended: true}))//tem que fazer isso para desestruturar o json
+
+app.post('/disciplinas', (req, res)=>{
+    const {equivalencia, sigla, ementa} = req.body;
+
+
+    const disciplinasString = fs.readFileSync(dbPath, {encoding:"utf-8"})
+    const disciplinas = JSON.parse(disciplinasString);
+
+    //criar nova disciplina
+    const novaDisciplina = {
+        //criar json igual ao arquvio:
+        id: disciplinas.length + 1,
+        sigla,
+        ementa,
+        equivalencia,
+        //pois na linha 62 ja fizemos a 'instancia'
+    }
+    disciplinas.push(novaDisciplina)
+
+    //disciplinas é um json pois na linha 69 fizemos isso, queremos stringuifcar passando o argumentos
+    fs.writeFileSync(dbPath, JSON.stringify(disciplinas, null, 1))
+    
+    res.status(201).send('Disciplina criada com sucessp')
+
+
+})
+
+
 
 //ligar o servidor para ouvir porta
 app.listen(3000, () =>{
