@@ -1,22 +1,14 @@
 import './App.css'
-import Pokemon from './Pokemon';
-import axios from 'axios';
+import Pokemon from './Pokemon'; //Importando o componente Pokemon
+import axios from 'axios'; //A lib axios permite fazer requisições HTTP
+import { useState } from 'react'; //Importando o hook useState do React
 
 export default function App() {
-  const url = 'https://pokeapi.co/api/v2/pokemon/1';
-
-  const buscaPokemon = async () => {
-    const pokemon = await axios.get(url);
-    const pokemonName = pokemon.data.name;
-    console.log(pokemonName);
-  }
-
-  return(
-    <>
-      <Pokemon nome="Bulbasauro"/>
-      <Pokemon nome="riolu"/>
-      <Pokemon nome="Lucario"/>
-      <button onClick={buscaPokemon}>Buscar</button>
-    </>
+  
+  
+  return (
+   <>
+    <Pokemons/>
+   </>
   )
 }
