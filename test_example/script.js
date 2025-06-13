@@ -49,6 +49,7 @@ const addProduto = (nomeProduto) =>{
 }
 const incrementaProd = (evt) =>{
     let qtdAtual = Number(evt.target.parentNode.childNodes[0].childNodes[1].innerText);
+    
     qtdAtual++;
     evt.target.parentNode.childNodes[0].childNodes[1].innerText = qtdAtual;
     console.log(evt);
