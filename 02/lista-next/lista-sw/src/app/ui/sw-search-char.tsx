@@ -2,57 +2,52 @@
 import axios from 'axios'
 import SwChar, { ISwCharProp } from './sw-char';
 import { useState } from 'react';
+import styles from './sw-search-char.module.css';
 
 export default function SWSearch(){
     const url = 'https://starwars-databank-server.vercel.app/api/v1/characters/name/';
-    const [canDisplay, setCanDisplay] = useState(false);
-    const [swChar, setSwChar] = useState<ISwCharProp>({
-        name: '',
-        description: '',
-        image: ''
-    });
+    const [CanDisplay, setCanDisplay] = useState(false);
+    const [SwCharState, setSwCharState] = useState(<SwChar name='' description='' image='' />);
 
-    const buscaPersonagem = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        const form = event.currentTarget;
-        const input = form.elements.namedItem('sw-name') as HTMLInputElement;
-        const nome = input.value || 'aa';
-        try {
-            const {data} = await axios.get(`${url}${nome}`);
-            let newSwChar: ISwCharProp;
-            if (data.length === 0){
-                newSwChar = {
-                    name: 'Luke Cry Walker',
-                    description: 'Achou nada!',
-                    image: 'https://i.ytimg.com/vi/6E8qiKXNl3U/maxresdefault.jpg'
-                }
-            } else {
-                newSwChar = {
-                    name: data[0].name,
-                    description: data[0].description,
-                    image: data[0].image
-                }
-            }
-            setSwChar(newSwChar);
-            setCanDisplay(true);
-        } catch (e) {
-            setSwChar({
-                name: 'Erro',
-                description: 'Erro ao buscar personagem',
+    const buscaPersonagem = async (FormData: FormData) => {
+        const nome = FormData.get('sw-name');
+        let newSwChar: ISwCharProp;
+        if (!nome) {
+            newSwChar = {
+                name: 'O nome não pode ser vazio! :(',
+                description: 'Escreva algum personagem para buscar',
                 image: 'https://i.ytimg.com/vi/6E8qiKXNl3U/maxresdefault.jpg'
-            });
+            };
+            setSwCharState(<SwChar {...newSwChar} />);
             setCanDisplay(true);
+            return;
         }
+        const { data } = await axios.get(`${url}${encodeURIComponent(nome.toString().trim())}`);
+        if (!Array.isArray(data) || data.length === 0) {
+            newSwChar = {
+                name: 'Não conheço esse personagem! :(',
+                description: 'Verifique se escreveu corretamente',
+                image: 'https://i.ytimg.com/vi/6E8qiKXNl3U/maxresdefault.jpg'
+            }
+        } else {
+            newSwChar = {
+                name: data[0].name,
+                description: data[0].description,
+                image: data[0].image
+            }
+        }
+        setSwCharState(<SwChar {...newSwChar} />);
+        setCanDisplay(true);
     }
 
     return(
-        <section>
-            <form onSubmit={buscaPersonagem}>
-                <input type="text" name="sw-name" id="sw-name" />
+        <section className={styles.busca}>
+            <form action={buscaPersonagem}>
+                <input type="text" name="sw-name" id="sw-name" className={styles.inputBusca}/>
                 <label htmlFor="sw-name" aria-hidden = 'true' hidden> Nome do Personagem </label>
-                <button type="submit">Buscar</button>
+                <button className={styles.botao}> Buscar</button>
             </form>
-            {canDisplay && <SwChar {...swChar} />}
+            {CanDisplay && SwCharState}
         </section>
     )
 }

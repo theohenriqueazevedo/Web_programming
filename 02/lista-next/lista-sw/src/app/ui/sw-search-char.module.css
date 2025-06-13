@@ -1,0 +1,76 @@
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #181c24;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  font-size: 1rem;
+}
+.button {
+  padding: 0.5rem 1.5rem;
+  background: #ffe81f;
+  color: #181c24;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.button:disabled {
+  background: #ccc;
+  color: #888;
+  cursor: not-allowed;
+}
+.error {
+  color: #ff5555;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+.busca {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #181c24;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inputBusca {
+  width: 80%;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: #232733;
+  color: #fff;
+}
+.botao {
+  padding: 0.5rem 1.5rem;
+  background: #ffe81f;
+  color: #181c24;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 1rem;
+}
+.botao:hover {
+  background: #ffd700;
+}
